@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>keepr — Privacy Policy</title>
+<meta name="description" content="Privacy policy for keepr, the maintenance and lifespan tracker.">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">keep<span class="r">r</span><span class="dot"></span></a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="screenshots.html">Screenshots</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<article class="wrap article">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 15 July 2026</p>
+
+  <p>keepr ("the app", "we", "us") is a maintenance and lifespan tracker developed by <strong>MFaran</strong>, an independent developer. This policy explains what information the app collects, how it is used, and the choices you have. By using keepr you agree to this policy.</p>
+
+  <h2>Information we collect</h2>
+  <p><strong>Account information.</strong> When you create an account we collect your <strong>email address</strong> and an optional <strong>display name</strong>. Authentication is handled by Google Firebase Authentication.</p>
+  <p><strong>Your content.</strong> Data you enter into the app to use its features, including maintenance tasks, odometer/distance and fuel logs, categories, cost entries, and your in-app preferences (theme, currency, timezone, reminder settings). This is stored in Google Cloud Firestore under your account.</p>
+  <p><strong>Device push token.</strong> To deliver reminder notifications, the app registers a device push token — a per-install identifier provided by Firebase Cloud Messaging (FCM) — and stores it under your account. It is used solely to send your reminders and is removed when you sign out or delete your account.</p>
+  <p><strong>We do not collect:</strong> your location, contacts, photos, advertising identifiers, or usage/analytics tracking data. keepr contains no advertising and no third-party analytics or tracking SDKs.</p>
+
+  <h2>How we use information</h2>
+  <ul>
+    <li>To provide the core service: storing your tasks and syncing them across your devices.</li>
+    <li>To send you <strong>reminder notifications</strong> about upcoming or overdue maintenance. Reminders are delivered as push notifications by our backend (Google Cloud Functions) through Firebase Cloud Messaging to your registered device(s). We do not send marketing messages.</li>
+    <li>To authenticate you and secure access to your data.</li>
+  </ul>
+
+  <h2>How information is stored and shared</h2>
+  <p>Your data is stored using <strong>Google Firebase (Authentication, Cloud Firestore, Cloud Functions, and Cloud Messaging)</strong>, which acts as our data processor. Data is transmitted over encrypted connections (HTTPS/TLS) and access is restricted to your authenticated account by security rules. Your device push token is transmitted to Firebase Cloud Messaging solely to deliver your reminder notifications.</p>
+  <p>We <strong>do not sell</strong> your personal information and <strong>do not share</strong> it with third parties for their own purposes. Data is processed only by Google Firebase to operate the app. See Google's privacy policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>Your data is retained while your account exists. You can <strong>delete your account and all associated data at any time</strong> from <strong>Settings → Account → Delete account</strong> inside the app. This permanently removes your account and all your tasks, logs, categories, and cost entries. You may also request deletion by emailing us at the address below.</p>
+
+  <h2>Children</h2>
+  <p>keepr is not directed to children under 13 and we do not knowingly collect personal information from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy from time to time. Material changes will be reflected by the "Last updated" date above.</p>
+
+  <h2>Contact</h2>
+  <p>For any privacy questions or data requests, contact <strong>MFaran</strong> at:</p>
+  <div class="contact-card">
+    <a href="mailto:farantariq09@gmail.com">farantariq09@gmail.com</a>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span class="muted">© 2026 keepr · Built by MFaran</span>
+    <div class="flinks">
+      <a href="index.html">Home</a>
+      <a href="screenshots.html">Screenshots</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:farantariq09@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
