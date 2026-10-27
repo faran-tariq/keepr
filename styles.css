@@ -41,7 +41,9 @@ body {
 .brand { display: flex; align-items: center; font-weight: 600; font-size: 24px; letter-spacing: -1px; text-decoration: none; color: var(--text); }
 .brand .r { color: var(--accent); }
 .brand .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent-secondary); margin-left: 5px; }
-.nav-links { display: flex; gap: 28px; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.social-links { display: flex; align-items: center; gap: 14px; padding-left: 22px; border-left: 1px solid var(--border); }
+.social-links a { display: flex; }
 .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 15px; font-weight: 500; transition: color .15s; }
 .nav-links a:hover { color: var(--accent); }
 
@@ -65,6 +67,32 @@ body {
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(56,189,248,.35); }
 .btn-ghost { border: 1px solid var(--border); color: var(--text); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+.hero-grid { display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: center; text-align: left; }
+.hero-grid .app-icon { margin: 0 0 28px; }
+.hero-grid .tagline, .hero-grid .lead { margin-left: 0; }
+.hero-grid .cta-row { justify-content: flex-start; }
+.pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.pills span { font-size: 13px; color: var(--text-secondary); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; }
+.phone-frame {
+  border-radius: 34px; padding: 8px; background: var(--surface); border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(0,0,0,.55), 0 0 60px rgba(56,189,248,.12);
+}
+.phone-frame video { display: block; width: 100%; aspect-ratio: 9 / 16; border-radius: 27px; background: #000; }
+.video-hint { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 12px; }
+
+/* ---- Feature showcase ---- */
+.showcase { display: flex; flex-direction: column; gap: 72px; margin-top: 56px; }
+.showcase-row { display: flex; align-items: center; gap: 56px; }
+.showcase-row:nth-child(even) { flex-direction: row-reverse; }
+.showcase-row img {
+  width: 300px; height: auto; flex-shrink: 0; border-radius: 24px; border: 1px solid var(--border);
+  box-shadow: 0 16px 44px rgba(0,0,0,.5);
+}
+.showcase-copy { flex: 1; }
+.showcase-copy .kicker { color: var(--accent); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.showcase-copy h3 { font-size: 26px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.25; margin: 8px 0 14px; }
+.showcase-copy p { color: var(--text-secondary); font-size: 16px; margin-bottom: 12px; }
 
 /* ---- Sections ---- */
 .section { padding: 56px 0; }
@@ -119,12 +147,26 @@ body {
 footer { border-top: 1px solid var(--border); padding: 40px 0; margin-top: 40px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 footer .muted { color: var(--text-muted); font-size: 14px; }
-footer .flinks { display: flex; gap: 22px; }
+footer .flinks { display: flex; flex-wrap: wrap; gap: 12px 22px; }
 footer .flinks a { color: var(--text-secondary); text-decoration: none; font-size: 14px; }
 footer .flinks a:hover { color: var(--accent); }
 
 /* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-grid .app-icon { margin: 0 auto 28px; }
+  .hero-grid .tagline, .hero-grid .lead { margin-left: auto; }
+  .hero-grid .cta-row, .pills { justify-content: center; }
+  .hero-video { max-width: 320px; width: 100%; margin: 0 auto; }
+  .showcase-row, .showcase-row:nth-child(even) { flex-direction: column; gap: 28px; text-align: center; }
+  .showcase-row img { width: 100%; max-width: 300px; }
+}
 @media (max-width: 640px) {
+  .wrap { padding: 0 16px; }
+  .nav-links > a[href*="screenshots"] { display: none; }
+  .social-links { padding-left: 14px; gap: 12px; }
+  .showcase { gap: 56px; }
+  .showcase-copy h3 { font-size: 22px; }
   .hero { padding: 56px 0 40px; }
   .hero h1 { font-size: 40px; }
   .hero .tagline { font-size: 18px; }

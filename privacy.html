@@ -20,20 +20,25 @@
       <a href="index.html#features">Features</a>
       <a href="screenshots.html">Screenshots</a>
       <a href="privacy.html">Privacy</a>
+      <span class="social-links">
+        <a href="https://play.google.com/store/apps/details?id=com.faran.keepr" target="_blank" rel="noopener" aria-label="keepr on Google Play" title="Google Play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.2 2.3c-.3.2-.4.6-.4 1v17.4c0 .4.1.8.4 1L14 12 4.2 2.3zM15.1 13.1l-2.3 2.3-8 7.8c.3.1.7 0 1-.2l10.9-6.2-1.6-3.7zM15.1 10.9l1.6-3.7L5.8 1c-.3-.2-.7-.3-1-.2l8 7.8 2.3 2.3zM20.3 10.8l-2.7-1.6-1.8 2.8 1.8 2.8 2.7-1.6c.7-.4.7-2 0-2.4z"/></svg></a>
+        <a href="https://www.youtube.com/@keeprApp" target="_blank" rel="noopener" aria-label="keepr on YouTube" title="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg></a>
+        <a href="https://www.facebook.com/people/Keepr/61594961169582/" target="_blank" rel="noopener" aria-label="keepr on Facebook" title="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></a>
+      </span>
     </div>
   </div>
 </nav>
 
 <article class="wrap article">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 16 July 2026</p>
+  <p class="updated">Last updated: 27 October 2026</p>
 
   <p>keepr ("the app", "we", "us") is a maintenance and lifespan tracker developed by <strong>MFaran</strong>, an independent developer. This policy explains what information the app collects, how it is used, and the choices you have. By using keepr you agree to this policy.</p>
 
   <h2>Information we collect</h2>
-  <p><strong>Account information.</strong> When you create an account we collect your <strong>email address</strong> and <strong>display name</strong>. Authentication is handled by Google Firebase Authentication.</p>
-  <p><strong>Your content.</strong> Data you enter into the app to use its features, including maintenance tasks, odometer/distance and fuel logs, categories, cost entries, and your in-app preferences (theme, currency, timezone, reminder settings). This is stored in Google Cloud Firestore under your account.</p>
-  <p><strong>Device push token.</strong> To deliver reminder notifications, the app registers a device push token — a per-install identifier provided by Firebase Cloud Messaging (FCM) — and stores it under your account. It is used solely to send your reminders and is removed when you sign out or delete your account.</p>
+  <p><strong>Account information.</strong> When you create an account we collect your <strong>email address</strong> and your <strong>name</strong> (used in the in-app greeting; you can change it in Settings → Account). Authentication is handled by Google Firebase Authentication.</p>
+  <p><strong>Your content.</strong> Data you enter into the app to use its features, including maintenance tasks, odometer/distance and fuel logs, categories, cost entries, a record of each finished task cycle, your on-time streak, keepr level and points, and your in-app preferences (theme, currency, units, timezone, reminder and achievement-alert settings). This is stored in Google Cloud Firestore under your account.</p>
+  <p><strong>Device push token.</strong> To deliver reminder notifications, the app registers a device push token — a per-install identifier provided by Firebase Cloud Messaging (FCM) — and stores it under your account. It is used solely to send your reminders and achievement alerts and is removed when you sign out or delete your account.</p>
   <p><strong>Crash and diagnostic data.</strong> To keep the app stable, we use <strong>Firebase Crashlytics</strong> to collect crash reports and diagnostic information when the app crashes or encounters an error — such as stack traces, device model, operating system version, and the state of the app at the time. Crash reports are associated with your account identifier so we can investigate issues affecting your account. This data is used only to diagnose and fix problems, and Crashlytics retains it for a limited period (90 days) before it is automatically deleted.</p>
   <p><strong>We do not collect:</strong> your location, contacts, photos, advertising identifiers, or usage/analytics tracking data. keepr contains no advertising and no third-party analytics or tracking SDKs.</p>
 
@@ -41,16 +46,20 @@
   <ul>
     <li>To provide the core service: storing your tasks and syncing them across your devices.</li>
     <li>To send you <strong>reminder notifications</strong> about upcoming or overdue maintenance. Reminders are delivered as push notifications by our backend (Google Cloud Functions) through Firebase Cloud Messaging to your registered device(s). We do not send marketing messages.</li>
+    <li>To send <strong>achievement alerts</strong>, such as your on-time streak in reminders or a notification when you reach a new keepr level. You can turn these off in Settings.</li>
     <li>To authenticate you and secure access to your data.</li>
     <li>To diagnose and fix crashes and errors, using the crash and diagnostic data described above.</li>
   </ul>
 
   <h2>How information is stored and shared</h2>
-  <p>Your data is stored using <strong>Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, and Crashlytics)</strong>, which acts as our data processor. Data is transmitted over encrypted connections (HTTPS/TLS) and access is restricted to your authenticated account by security rules. Your device push token is transmitted to Firebase Cloud Messaging solely to deliver your reminder notifications.</p>
+  <p>Your data is stored using <strong>Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud Messaging, Crashlytics, and Hosting)</strong>, which acts as our data processor. Data is transmitted over encrypted connections (HTTPS/TLS) and access is restricted to your authenticated account by security rules. Your device push token is transmitted to Firebase Cloud Messaging solely to deliver your notifications.</p>
   <p>We <strong>do not sell</strong> your personal information and <strong>do not share</strong> it with third parties for their own purposes. Data is processed only by Google Firebase to operate the app. See Google's privacy policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</p>
 
+  <h2>Using keepr in a web browser</h2>
+  <p>If you use keepr in a web browser, it signs in to the same account and works with the same data, served through Firebase Hosting. To keep you signed in and let the app work offline, your browser stores your sign-in session and a local copy of your data (in IndexedDB and local storage) on your device. You can remove it by signing out or clearing your browser's site data. The browser version does not use Crashlytics, does not register a push token, and does not set any advertising or analytics cookies.</p>
+
   <h2>Data retention and deletion</h2>
-  <p>Your data is retained while your account exists. You can <strong>delete your account and all associated data at any time</strong>, permanently removing your account and all your tasks, logs, categories, and cost entries:</p>
+  <p>Your data is retained while your account exists. You can <strong>delete your account and all associated data at any time</strong>, permanently removing your account and all your tasks, logs, categories, cost entries, completion records, and streak and level data:</p>
   <ul>
     <li><strong>In the app:</strong> <strong>Settings → Account → Delete account</strong>.</li>
     <li><strong>On the web</strong> (no app install needed): sign in at <a href="https://keepr-17dd0.web.app/delete-account" target="_blank" rel="noopener">https://keepr-17dd0.web.app/delete-account</a> and confirm deletion. Deletion takes effect immediately.</li>
@@ -77,6 +86,9 @@
       <a href="index.html">Home</a>
       <a href="screenshots.html">Screenshots</a>
       <a href="privacy.html">Privacy</a>
+      <a href="https://play.google.com/store/apps/details?id=com.faran.keepr" target="_blank" rel="noopener">Google Play</a>
+      <a href="https://www.youtube.com/@keeprApp" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.facebook.com/people/Keepr/61594961169582/" target="_blank" rel="noopener">Facebook</a>
       <a href="mailto:farantariq09@gmail.com">Contact</a>
     </div>
   </div>
